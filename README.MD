@@ -11,16 +11,10 @@ This project scrapes podcast episode information from the Ethical Schools websit
 
 ## Requirements
 
-To run this project, you need the following Python packages:
-
-- `requests`
-- `beautifulsoup4`
-- `pandas`
-
-You can install the required packages using pip:
+To run this project, you need to pip install requirements.txt
 
 ```bash
-pip install requests beautifulsoup4 pandas
+pip install requirements.txt
 ```
 
 ## How to Use
