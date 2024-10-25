@@ -38,6 +38,3 @@ The CSV file contains the following columns:
 - `transcription_url`: The URL of the transcription page.
 - `transcription_text`: The text content of the transcription.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
