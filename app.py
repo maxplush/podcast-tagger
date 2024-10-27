@@ -69,8 +69,6 @@ if __name__ == "__main__":
     save_to_csv(episode_urls)
 
 # TODO:
-# clean up hmtl scraped content (have it just be the overview? or the text content)
-# create a database of the tags(with other columns)
 # RAG summaries of each of the text content
 # TAG the summaries
 # Output DB with tags for each episode
