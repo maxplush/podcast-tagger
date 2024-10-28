@@ -55,7 +55,7 @@ def extract_tags_with_groq(episode_name, transcription_text):
     return chat_completion.choices[0].message.content.split('\n')  # Assuming tags are returned as a list
 
 # Function to save tags to CSV
-def save_tags_to_csv(data, filename='/Users/maxplush/Documents/podcastscraper/newtags.csv'):
+def save_tags_to_csv(data, filename='/Users/maxplush/Documents/podcastscraper/ai-tag-episodes.csv'):
     with open(filename, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         writer.writerow(['Episode Name', 'Episode URL', 'Tags'])
