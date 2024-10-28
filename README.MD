@@ -37,7 +37,7 @@ $ export $(cat .env)
 3. Run the script to scrape the data:
 
    ```bash
-   python3 app.py
+   python3 aiapp.py
    ```
 
 4. After execution, the scraped data will be saved in `episodes_transcriptions.csv`.
