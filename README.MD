@@ -1,13 +1,13 @@
-# Podcast Transcription Scraper
+# Podcast Scraper
 
-This project scrapes podcast episode information from the Ethical Schools website, collects episode names, URLs, transcription URLs, and the corresponding text of the transcriptions. The data is stored in a CSV file for further analysis or processing.
+This project scrapes podcast episode information from the Ethical Schools website and uses the Groq API to extract relevant tags for each episode. The scraped data is saved in a CSV file for easy access and analysis.
 
 ## Features
 
-- Scrapes episode names and URLs from the podcast episode page.
-- Constructs transcription URLs based on the episode URLs.
-- Extracts transcription text from the corresponding URLs.
-- Stores the collected data in a CSV file for easy access.
+- Scrapes the latest podcast episode URLs from the Ethical Schools website.
+- Retrieves and cleans the episode content and transcription.
+- Utilizes the Groq API to extract relevant tags from the episode content.
+- Saves the episode names, URLs, and extracted tags in a CSV file.
 
 ## Requirements
 
@@ -17,14 +17,27 @@ To run this project, you need to pip install requirements.txt
 pip install requirements.txt
 ```
 
-## How to Use
+## Prerequisites
+
+- Before running the script, make sure you have the packages listed in the requirements.txt file.
+- A `.env` file in the same directory containing your  [Groq API KEY](https://groq.com). The file should have the following format:
+  
+  ```env
+  GROQ_API_KEY=your_groq_api_key_here
+
+- Ensure your .env file is configured correctly with your Groq API key. Connect your .env by running the command.
+
+```
+$ export $(cat .env)
+```
+## Usage
 
 1. Clone the repository or download the project files.
 2. Update the script with any necessary configurations (e.g., URL paths).
 3. Run the script to scrape the data:
 
    ```bash
-   python app.py
+   python3 app.py
    ```
 
 4. After execution, the scraped data will be saved in `episodes_transcriptions.csv`.
@@ -35,6 +48,6 @@ The CSV file contains the following columns:
 
 - `episode_name`: The title of the podcast episode.
 - `episode_url`: The URL of the podcast episode.
-- `transcription_url`: The URL of the transcription page.
-- `transcription_text`: The text content of the transcription.
+- `tag`: LLM generated tag of the podcast episode. 
+
 
